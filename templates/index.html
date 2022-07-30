@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Source Software Inspector</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="mt-1 pt-3">
+
+        <div class="container">
+            <div class="container-fluid px-4 my-class1">
+                <div class="row g-3 my-2">
+                    <div class="rounded">
+                        <div class="border p-3">
+
+                            <figure class="text-center">
+                                <blockquote class="blockquote">
+                                    <h2>Open Source Software Inspector</h2>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    A Web App, Built with Flask.
+                                </figcaption>
+                            </figure>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-6">
+                    <div class="rounded">
+                        <div class="border p-3">
+
+                            <div class="prediction-area">
+
+                                <div class='div2'>
+                                    <form action="{{ url_for('inspect') }}" method="POST">
+
+                                        <input class="form-control" type="text" name="repo_link"
+                                            placeholder="Github Repo Link"><br>
+
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <input type="submit" class="btn btn-outline-dark" value="Inspect">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-6">
+                    <div class="rounded">
+                        <div class='footer'>
+                            <div class="contact">
+                                <a target="_blank" href="https://github.com/abhisheksk24"><i
+                                        class="fab fa-github fa-lg contact-icon"></i></a>
+                            </div>
+                            <p class='footer-description'>Made by Abhishek , Kushal & Eeshan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
