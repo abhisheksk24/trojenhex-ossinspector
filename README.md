@@ -2,6 +2,9 @@
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
 * Open Source Software Inspector Based on Scoring method
 * Deployed on Heroku at - https://ossinspector.herokuapp.com/
+```
+To Run the App: Open terminal : flask run
+```
 # Sample Screenshots
 <table>
   <tr>
