@@ -152,23 +152,23 @@ def inspect():
         else :
             contributors_percentage = 100
 
-        # license score
-        license_percentage=0
-        if license1=="None":
-            license_percentage = -1
-        else:
-            license_percentage=100
-        #Average Score
-        sum_list = [stars_percentage,forks_percentage,issues_percentage,watchers_percentage,contributors_percentage,license_percentage]
+        #Ratings
+        if (average<70):
+            rating = "Good"
+            rating_color = "primary"
 
-        def Average(l): 
-            avg = sum(l) / len(l) 
-            return avg
+            if(average<50):
+                rating = "Poor"
+                rating_color = "warning"
 
-        average = round(Average(sum_list),2) 
+                if(average<25):
+                    rating = "Unsafe"
+                    rating_color = "danger"
 
+        else :
+            rating = "Excellent"
+            rating_color = "success"
 
-        
               
         return render_template('result.html', ui_reponame = reponame, ui_username = username, ui_desc = description, 
         ui_stars = stars, 
@@ -183,7 +183,10 @@ def inspect():
         ui_stars_percentage = stars_percentage, 
         ui_score = average ,
         ui_repolastupdated = repolastupdated, 
-        ui_watchers = watchers)
+        ui_watchers = watchers,
+        ui_avatar = avatar,
+        ui_rating = rating,
+        ui_rcolor = rating_color)
 
 
 if __name__ == '__main__':
