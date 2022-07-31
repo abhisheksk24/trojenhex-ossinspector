@@ -43,72 +43,93 @@
                 <div class="row g-3 my-2">
                     <div class="rounded">
 
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <div class="card py-4">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="round-image">
+                                        <img src="{{ ui_avatar }}" class="rounded-circle" width="97">
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+
+                                    <h4 class="mt-3">{{ ui_reponame }}</h4>
+                                    <span>By {{ ui_username }} </span>
+
+                                    <div class="px-5">
+                                        <p class="content">{{ui_desc}}</p>
+
+                                        <button type="button" class="btn btn-outline-{{ui_rcolor}}">{{ui_rating}}</button>
+
+                                        <!-- <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: 75%">{{ui_score}} %</div>
+                                          </div> -->
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="container mt-5">
                             <div class="d-flex justify-content-center row">
                                 <div class="align-content-center col-md-6">
                                     <div class="review-card p-2 bg-white rounded">
-                                        <div class="d-flex mt-0 p-2"><img src="{{ url_for('static', filename='logo1.png') }}">
-                                            <div class="ml-1 mt-2">
-                                                <h6 class="crop-text mb-0">{{ ui_reponame }}&nbsp;</h6>
-                                                <div class="mt-0"><span class="cmpny-name">{{ ui_username }}</span><span
-                                                        class="dots"></span><span class="text-black-50 num-reviews">{{ ui_follower }}
-                                                        Followers</span></div>
-                                                <div class="d-flex flex-row align-items-center">
-                                                    <div class="square-ratings mr-2"><i
-                                                            class="fa fa-square ratings"></i><i
-                                                            class="fa fa-square ratings"></i><i
-                                                            class="fa fa-square ratings"></i><i
-                                                            class="fa fa-square ratings"></i><i
-                                                            class="fa fa-square rating-none"></i></div><span
-                                                        class="font-weight-bold text-black-50 excellent">Excellent</span>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="px-4 rating-box mb-3">
                                             <div class="border rounded">
                                                 <div class="text-center score py-2">
-                                                    <div class="rating-out"><span class="get-rating">{{ ui_score }}</span><span
-                                                            class="font-weight-bold">/100</span></div>
+                                                    <div class="rating-out"><span class="get-rating">{{ ui_score
+                                                            }}</span><span class="font-weight-bold">/100</span></div>
                                                     <div><span>Main Score</span></div>
                                                 </div>
                                                 <div
                                                     class="d-flex justify-content-around align-items-center align-content-center border-top">
                                                     <div class="border-right px-2 text-center py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_stars }}</span><span><b>Stars</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_stars
+                                                            }}</span><span><b>Stars</b></span>
                                                     </div>
                                                     <div class="text-center border-right px-2 py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_forks }}</span><span><b>Forks</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_forks
+                                                            }}</span><span><b>Forks</b></span>
                                                     </div>
                                                     <div class="text-center border-right px-2 py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_issues }}</span><span><b>Issues</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_issues
+                                                            }}</span><span><b>Issues</b></span>
                                                     </div>
                                                     <div class="text-center px-2 py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_contri }}</span><span><b>Contributions</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_contri
+                                                            }}</span><span><b>Contributions</b></span>
                                                     </div>
                                                 </div>
 
                                                 <div
                                                     class="d-flex justify-content-around align-items-center align-content-center border-top">
                                                     <div class="border-right px-2 text-center py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_repoage }} Days</span><span><b>Age</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_repoage }}
+                                                            Days</span><span><b>Age</b></span>
                                                     </div>
                                                     <div class="text-center border-right px-2 py-2"><span
-                                                        class="d-block font-weight-bold">{{ ui_repolastupdated }} Days ago</span><span><b>Recently Updated</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_repolastupdated }}
+                                                            Days ago</span><span><b>Recently Updated</b></span>
                                                     </div>
                                                     <div class="text-center border-right px-2 py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_watchers }}</span><span><b>Watchers</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_watchers
+                                                            }}</span><span><b>Watchers</b></span>
                                                     </div>
-                                                    
+
                                                 </div>
 
                                                 <div
                                                     class="d-flex justify-content-around align-items-center align-content-center border-top">
                                                     <div class="border-right px-2 text-center py-2"><span
-                                                            class="d-block font-weight-bold">{{ ui_license }}</span><span><b>License</b></span>
+                                                            class="d-block font-weight-bold">{{ ui_license
+                                                            }}</span><span><b>License</b></span>
                                                     </div>
                                                     <div class="text-center px-2 py-2"><span
-                                                        class="d-block font-weight-bold">{{ ui_language }}</span><span><b>Language</b></span>
-                                                </div>
+                                                            class="d-block font-weight-bold">{{ ui_language
+                                                            }}</span><span><b>Language</b></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -121,6 +142,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- <div role="progressbar" aria-valuenow="ui_score" aria-valuemin="0" aria-valuemax="100" style="--value:65"></div> -->
 
         <!-- Footer -->
         <div class="container">

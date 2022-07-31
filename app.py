@@ -32,6 +32,7 @@ def inspect():
 
         tempusername = (output["owner"])
         username = str(tempusername["login"])
+        avatar = str(tempusername["avatar_url"])
 
 
         userdetails = "https://api.github.com/users/{}".format(username)
@@ -156,10 +157,25 @@ def inspect():
             avg = sum(l) / len(l) 
             return avg
 
-        average = round(Average(sum_list),2) 
+        average = round(Average(sum_list),2)
 
+        #Ratings
+        if (average<70):
+            rating = "Good"
+            rating_color = "primary"
 
-        
+            if(average<50):
+                rating = "Poor"
+                rating_color = "warning"
+
+                if(average<25):
+                    rating = "Unsafe"
+                    rating_color = "danger"
+
+        else :
+            rating = "Excellent"
+            rating_color = "success"
+
               
         return render_template('result.html', ui_reponame = reponame, ui_username = username, ui_desc = description, 
         ui_stars = stars, 
@@ -174,7 +190,10 @@ def inspect():
         ui_stars_percentage = stars_percentage, 
         ui_score = average ,
         ui_repolastupdated = repolastupdated, 
-        ui_watchers = watchers)
+        ui_watchers = watchers,
+        ui_avatar = avatar,
+        ui_rating = rating,
+        ui_rcolor = rating_color)
 
 
 if __name__ == '__main__':
