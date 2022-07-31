@@ -17,3 +17,9 @@
  <td><img src = "samples/output.png" height="400"></td>
  </tr>
 </table>
+
+# Contributors
+* Eeshan Chanpura
+https://github.com/Eeshan2001
+* Kushal Jivarajani
+https://github.com/Kushaljj
