@@ -51,10 +51,13 @@ def inspect():
         watchers = int(output["subscribers_count"])
 
         #License 
-        templicense = (output["license"])
-        license1 = str(templicense["name"])
-
-        #Cntributions
+        templicense = (output["license"]) 
+        if templicense is None:
+            license1="None"
+        else:
+            license1 = str(templicense["name"])
+        
+        #Contributions
         contributorsapi = urll+"/contributors"
         contributorsdata = requests.get(contributorsapi)
         contributorsdata2 = json.loads(contributorsdata.text)
@@ -149,33 +152,23 @@ def inspect():
         else :
             contributors_percentage = 100
 
-
+        # license score
+        license_percentage=0
+        if license1=="None":
+            license_percentage = -1
+        else:
+            license_percentage=100
         #Average Score
-        sum_list = [stars_percentage,forks_percentage,issues_percentage,watchers_percentage,contributors_percentage]
+        sum_list = [stars_percentage,forks_percentage,issues_percentage,watchers_percentage,contributors_percentage,license_percentage]
 
         def Average(l): 
             avg = sum(l) / len(l) 
             return avg
 
-        average = round(Average(sum_list),2)
+        average = round(Average(sum_list),2) 
 
-        #Ratings
-        if (average<70):
-            rating = "Good"
-            rating_color = "primary"
 
-            if(average<50):
-                rating = "Poor"
-                rating_color = "warning"
-
-                if(average<25):
-                    rating = "Unsafe"
-                    rating_color = "danger"
-
-        else :
-            rating = "Excellent"
-            rating_color = "success"
-
+        
               
         return render_template('result.html', ui_reponame = reponame, ui_username = username, ui_desc = description, 
         ui_stars = stars, 
@@ -190,10 +183,7 @@ def inspect():
         ui_stars_percentage = stars_percentage, 
         ui_score = average ,
         ui_repolastupdated = repolastupdated, 
-        ui_watchers = watchers,
-        ui_avatar = avatar,
-        ui_rating = rating,
-        ui_rcolor = rating_color)
+        ui_watchers = watchers)
 
 
 if __name__ == '__main__':
