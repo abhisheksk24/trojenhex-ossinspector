@@ -1,1 +1,1 @@
-# TrojenHex OSS Inspector for repository rating and is it good repo or not. 
+# TrojenHex OSS Inspector for repository rating and checking whether good repo or not. 
