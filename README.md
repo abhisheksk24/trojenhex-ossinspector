@@ -8,13 +8,13 @@
     <td>Input Page</td>
   </tr>
  <tr>
- <td><img src = "samples/input.png" height="400"></td>
+ <td><img src = "samples/input.png" height="200"></td>
  </tr>
  <tr>
     <td>Output Page</td>
   </tr>
  <tr>
- <td><img src = "samples/output.png" height="400"></td>
+ <td><img src = "samples/output.png" height="200"></td>
  </tr>
 </table>
 
