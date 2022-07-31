@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Source Software Inspector</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="mt-1 pt-3">
+
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-2">
+                    <div class="rounded">
+                        <div class="border p-3">
+
+                            <figure class="text-center">
+                                <blockquote class="blockquote">
+                                    <h2>Open Source Software Inspector</h2>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    A Web App, Built with Flask.
+                                </figcaption>
+                            </figure>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-2">
+                    <div class="rounded">
+
+                        <div class="container mt-5">
+                            <div class="d-flex justify-content-center row">
+                                <div class="align-content-center col-md-6">
+                                    <div class="review-card p-2 bg-white rounded">
+                                        <div class="d-flex mt-0 p-2"><img src="{{ url_for('static', filename='logo1.png') }}">
+                                            <div class="ml-1 mt-2">
+                                                <h6 class="crop-text mb-0">{{ ui_reponame }}&nbsp;</h6>
+                                                <div class="mt-0"><span class="cmpny-name">{{ ui_username }}</span><span
+                                                        class="dots"></span><span class="text-black-50 num-reviews">{{ ui_follower }}
+                                                        Followers</span></div>
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div class="square-ratings mr-2"><i
+                                                            class="fa fa-square ratings"></i><i
+                                                            class="fa fa-square ratings"></i><i
+                                                            class="fa fa-square ratings"></i><i
+                                                            class="fa fa-square ratings"></i><i
+                                                            class="fa fa-square rating-none"></i></div><span
+                                                        class="font-weight-bold text-black-50 excellent">Excellent</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="px-4 rating-box mb-3">
+                                            <div class="border rounded">
+                                                <div class="text-center score py-2">
+                                                    <div class="rating-out"><span class="get-rating">{{ ui_score }}</span><span
+                                                            class="font-weight-bold">/100</span></div>
+                                                    <div><span>Main Score</span></div>
+                                                </div>
+                                                <div
+                                                    class="d-flex justify-content-around align-items-center align-content-center border-top">
+                                                    <div class="border-right px-2 text-center py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_stars }}</span><span><b>Stars</b></span>
+                                                    </div>
+                                                    <div class="text-center border-right px-2 py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_forks }}</span><span><b>Forks</b></span>
+                                                    </div>
+                                                    <div class="text-center border-right px-2 py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_issues }}</span><span><b>Issues</b></span>
+                                                    </div>
+                                                    <div class="text-center px-2 py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_contri }}</span><span><b>Contributions</b></span>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="d-flex justify-content-around align-items-center align-content-center border-top">
+                                                    <div class="border-right px-2 text-center py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_repoage }} Days</span><span><b>Age</b></span>
+                                                    </div>
+                                                    <div class="text-center border-right px-2 py-2"><span
+                                                        class="d-block font-weight-bold">{{ ui_repolastupdated }} Days ago</span><span><b>Recently Updated</b></span>
+                                                    </div>
+                                                    <div class="text-center border-right px-2 py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_watchers }}</span><span><b>Watchers</b></span>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                <div
+                                                    class="d-flex justify-content-around align-items-center align-content-center border-top">
+                                                    <div class="border-right px-2 text-center py-2"><span
+                                                            class="d-block font-weight-bold">{{ ui_license }}</span><span><b>License</b></span>
+                                                    </div>
+                                                    <div class="text-center px-2 py-2"><span
+                                                        class="d-block font-weight-bold">{{ ui_language }}</span><span><b>Language</b></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-6">
+                    <div class="rounded">
+                        <div class='footer'>
+                            <div class="contact">
+                                <a target="_blank" href="https://github.com/abhisheksk24/IPL-score-prediction"><i
+                                        class="fab fa-github fa-lg contact-icon"></i></a>
+                            </div>
+                            <p class='footer-description'>Made by Abhishek , Kushal & Eeshan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

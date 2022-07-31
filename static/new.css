@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Footer */
+.footer{
+	background-color: #E9E9E9;
+	margin-top: 10px;
+	color: #000000;
+	padding: 12px;
+    text-align: center;
+	margin-bottom: 30px;
+}
+
+.contact-icon{
+	color: #000000;
+	padding: 7px;
+}
+
+.contact-icon:hover{
+	color: #a6a19a;
+}
+
+.footer-description{
+	margin: 0;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+/* Score Card */
+.crop-text {
+	-webkit-line-clamp: 2 !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+  }
+  
+  .cmpny-name {
+	color: blue;
+	font-weight: 600;
+  }
+  
+  .dots {
+	height: 6px;
+	width: 6px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 1px;
+	background-color: rgb(180,181,180);
+	border-radius: 50%;
+	display: inline-block;
+  }
+  
+  .num-reviews {
+	font-weight: 600;
+	font-size: 13px;
+  }
+  
+  .ratings {
+	color: blue;
+	margin-right: 3px;
+  }
+  
+  .rating-none {
+	color: #dad6d6;
+  }
+  
+  .excellent {
+	font-size: 13px;
+	margin-bottom: 2px;
+  }
+  
+  .get-rating {
+	font-size: 35px;
+	font-weight: 700;
+  }
+  
+  .rating-out {
+	margin-bottom: -8px;
+  }
