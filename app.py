@@ -155,9 +155,9 @@ def inspect():
         # license score
         license_percentage=0
         if license1=="None":
-            license_percentage = -1
+            license_percentage = -5
         else:
-            license_percentage=50
+            license_percentage=80
 
 
         #Average Score
@@ -172,11 +172,11 @@ def inspect():
         #Ratings
         if (average<70):
             rating = "Good"
-            rating_color = "primary"
+            rating_color = "warning"
 
             if(average<50):
                 rating = "Poor"
-                rating_color = "warning"
+                rating_color = "danger"
 
                 if(average<25):
                     rating = "Unsafe"
