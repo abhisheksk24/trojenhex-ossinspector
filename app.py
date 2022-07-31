@@ -56,8 +56,8 @@ def inspect():
             license1="None"
         else:
             license1 = str(templicense["name"])
-        
-        #Contributions
+
+        #Cntributions
         contributorsapi = urll+"/contributors"
         contributorsdata = requests.get(contributorsapi)
         contributorsdata2 = json.loads(contributorsdata.text)
@@ -151,6 +151,23 @@ def inspect():
             contributors_percentage = float(percentage(part,whole))
         else :
             contributors_percentage = 100
+        
+        # license score
+        license_percentage=0
+        if license1=="None":
+            license_percentage = -1
+        else:
+            license_percentage=50
+
+
+        #Average Score
+        sum_list = [stars_percentage,forks_percentage,issues_percentage,watchers_percentage,contributors_percentage,license_percentage]
+
+        def Average(l): 
+            avg = sum(l) / len(l) 
+            return avg
+
+        average = round(Average(sum_list),2)
 
         #Ratings
         if (average<70):
