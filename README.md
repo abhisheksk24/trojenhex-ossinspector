@@ -19,6 +19,9 @@ To Run the App: Open terminal : flask run
  <tr>
  <td><img src = "samples/output.png" height="300"></td>
  </tr>
+ <tr>
+ <td><img src = "samples/tf_oss_test.png" height="300"></td>
+ </tr>
 </table>
 
 # Contributors
