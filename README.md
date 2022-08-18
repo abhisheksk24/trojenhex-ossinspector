@@ -20,7 +20,7 @@ To Run the App: Open terminal : flask run
  <td><img src = "samples/output.png" height="300"></td>
  </tr>
  <tr>
- <td><img src = "samples/tf_oss_test.png" height="300" width="600"></td>
+ <td><img src = "samples/tf_oss_test.png" height="300" width="500"></td>
  </tr>
 </table>
 
